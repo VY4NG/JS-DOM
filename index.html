@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks App</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body class="container">
+    <br>
+    <!-- Card class will have the Bootstrop forms where users can enter information. -->
+    <div class="card">
+        <div class="row">
+            <div class="col-sm">
+                <!-- Bootstrap styled form to enter company name. -->
+                <div class="form-group"> 
+                    <label for="new-company">Company Name</label>
+                    <input type="text" class="form-control" id="new-company" placeholder="Company Name">
+                </div>
+                <!-- Bootstrap styled form to enter company ticker symbol. -->
+                <div class="form-group">
+                    <label for="new-ticker">Ticker Symbol</label>
+                    <input type="text" class="form-control" id="new-ticker" placeholder="Ticker Symbol">
+                </div>
+                <!-- Bootstrap styled form to enter current company price. -->
+                <!-- Price will be in USD, using step="0.01" and min="0". -->
+                <div class="form-group">
+                    <label for="new-price">Price (USD)</label>
+                    <input type="number" class="form-control" id="new-price" step="0.01" min="0" placeholder="0.00">
+                </div>
+                <!-- Bootstrap styled button so users can add the information entered into the table. -->
+                <div>
+                    <button id="add" class="btn btn-success form-control">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrop styled table -->
+    <table id="list" class="table table-success table-striped">
+        <tr>
+            <th>Company Name</th>
+            <th>Ticker Symbol</th>
+            <th>Dated Added</th>
+            <th>Price (USD) on Date Added</th>
+            <th>Remove From List</th>
+        </tr>
+    </table>
+
+    <script src="stocks.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
